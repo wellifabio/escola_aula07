@@ -13,25 +13,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Professor{
-  id Int @id @default(autoincrement())
-  nome String @db.VarChar(255)
-  email String @db.VarChar(100) @unique
-  senha String @db.VarChar(100)
+model Professor {
+  id     Int     @id @default(autoincrement())
+  nome   String  @db.VarChar(255)
+  email  String  @unique @db.VarChar(100)
+  senha  String  @db.VarChar(100)
   turmas Turma[]
 }
 
-model Turma{
-  id Int @id @default(autoincrement())
-  nome String @db.VarChar(255)
+model Turma {
+  id          Int         @id @default(autoincrement())
+  nome        String      @db.VarChar(255)
   professorId Int
-  professor Professor @relation(fields: [professorId], references: [id])
-  atividades Atividade[]
+  professor   Professor   @relation(fields: [professorId], references: [id])
+  atividades  Atividade[]
 }
 
-model Atividade{
-  id Int @id @default(autoincrement())
+model Atividade {
+  id        Int    @id @default(autoincrement())
   descricao String @db.Text
-  turmaId Int
-  turma Turma @relation(fields: [turmaId], references: [id])
+  turmaId   Int
+  turma     Turma  @relation(fields: [turmaId], references: [id])
 }

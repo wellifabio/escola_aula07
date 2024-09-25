@@ -1,0 +1,61 @@
+const uri = 'http://localhost:3000/';
+const user = JSON.parse(window.localStorage.getItem('userTurmaAtividade'));
+const turma = JSON.parse(window.localStorage.getItem('turma'));
+const professor = document.querySelector('#professor');
+const corpo = document.querySelector('#corpo');
+const form = document.querySelector('#formAtividade');
+
+if (!user)
+    window.location.href = './index.html';
+else{
+    if (!user.logado) {
+        window.location.href = './index.html';
+    }
+    if (!turma){
+        window.location.href = './home.html';
+    }
+}
+professor.innerHTML = user.nome;
+
+//Listar todas as turmas do professor
+fetch(uri + 'turma/' + turma.id)
+    .then(response => response.json())
+    .then(data => {
+        data.atividades.forEach(a => {
+            corpo.innerHTML += `
+            <tr>
+                <td>${a.id}</td>
+                <td>${a.descricao}</td>
+            </tr>`;
+        });
+    });
+
+//Cadastrar atividade
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const dados = {
+        descricao: form.descricao.value,
+        turmaId: turma.id
+    }
+    fetch(uri + 'atividade', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.id) {
+                alert('Atividade cadastrada com sucesso!');
+                window.location.reload();
+            }
+        });
+});
+
+//Sair do sistema
+function sair() {
+    window.localStorage.removeItem("userTurmaAtividade");
+    window.localStorage.removeItem("turma");
+    window.location.href = "./index.html";
+}

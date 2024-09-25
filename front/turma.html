@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="./assets/icone.png" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Sistema de Turmas e Atividades</title>
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de Turmas e Atividades</h1>
+    </header>
+    <main>
+        <section class="faixa">
+            <h4 id="professor"></h4>
+            <button onclick="sair()">Sair</button>
+        </section>
+        <section class="tabela">
+            <button onclick="modalNovo.classList.remove('oculto')">Cadastrar atividade</button>
+            <h3>Turmas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo"></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <h2>By Professor Wellington</h2>
+    </footer>
+    <div id="modalNovo" class="modal oculto">
+        <div class="janela">
+            <h2>Cadastrar atividade</h2>
+            <form id="formAtividade">
+                <input type="text" name="descricao" placeholder="Descrição da atividade" required>
+                <button type="reset" onclick="modalNovo.classList.add('oculto')">Cancelar</button>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./turma.js"></script>
+
+</html>
