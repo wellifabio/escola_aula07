@@ -1,0 +1,38 @@
+[
+    {
+        "nome": "1DES",
+        "professorId": 1
+    },
+    {
+        "nome": "2DES",
+        "professorId": 1
+    },
+    {
+        "nome": "3DES",
+        "professorId": 1
+    },
+    {
+        "nome": "1EA",
+        "professorId": 2
+    },
+    {
+        "nome": "2EA",
+        "professorId": 2
+    },
+    {
+        "nome": "3EA",
+        "professorId": 2
+    },
+    {
+        "nome": "1MECB",
+        "professorId": 3
+    },
+    {
+        "nome": "2MECB",
+        "professorId": 3
+    },
+    {
+        "nome": "3MECB",
+        "professorId": 3
+    }
+]

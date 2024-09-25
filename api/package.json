@@ -1,0 +1,25 @@
+{
+  "name": "atividades",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Wellington Martins",
+  "license": "ISC",
+  "description": "Sistema de Turmas e Atividades",
+  "devDependencies": {
+    "prisma": "^5.17.0"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "prisma": "^5.20.0"
+  }
+}
