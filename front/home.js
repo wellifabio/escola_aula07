@@ -19,9 +19,9 @@ fetch(uri + 'professor/' + user.id)
         data.turmas.forEach(t => {
             corpo.innerHTML += `
             <tr>
-                <td>${t.id}</td>
+                <td style="text-align:center">${t.id}</td>
                 <td>${t.nome}</td>
-                <td>
+                <td style="text-align:center">
                     <button class="bexcluir" onclick="excluir(${t.id})">Excluir</button>
                     <button class="bvisualizar" onclick="visualizar(${t.id})">Visualizar</button>
                 </td>

@@ -99,6 +99,8 @@ button {
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-secondary);
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .tabela{
@@ -116,6 +118,8 @@ button {
 
 .tabela h3{
     align-self: flex-start;
+    font-size: medium;
+    margin: 0.5rem;
 }
 
 .tabela table{
