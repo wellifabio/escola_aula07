@@ -20,7 +20,9 @@
         </section>
         <section class="tabela">
             <button onclick="modalNovo.classList.remove('oculto')">Cadastrar atividade</button>
-            <h3>Turmas</h3>
+            <div class="cabecalho">
+                <h3>Turma:</h3><label id="nomeTurma"></label>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -40,8 +42,10 @@
             <h2>Cadastrar atividade</h2>
             <form id="formAtividade">
                 <input type="text" name="descricao" placeholder="Descrição da atividade" required>
-                <button type="reset" onclick="modalNovo.classList.add('oculto')">Cancelar</button>
-                <button type="submit">Cadastrar</button>
+                <div>
+                    <button type="reset" onclick="modalNovo.classList.add('oculto')">Cancelar</button>
+                    <button type="submit">Cadastrar</button>
+                </div>
             </form>
         </div>
     </div>

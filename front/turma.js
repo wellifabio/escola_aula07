@@ -4,6 +4,7 @@ const turma = JSON.parse(window.localStorage.getItem('turma'));
 const professor = document.querySelector('#professor');
 const corpo = document.querySelector('#corpo');
 const form = document.querySelector('#formAtividade');
+const nomeTurma = document.querySelector('#nomeTurma');
 
 if (!user)
     window.location.href = './index.html';
@@ -16,7 +17,7 @@ else{
     }
 }
 professor.innerHTML = user.nome;
-
+nomeTurma.innerHTML = turma.nome;
 //Listar todas as turmas do professor
 fetch(uri + 'turma/' + turma.id)
     .then(response => response.json())
@@ -24,7 +25,7 @@ fetch(uri + 'turma/' + turma.id)
         data.atividades.forEach(a => {
             corpo.innerHTML += `
             <tr>
-                <td>${a.id}</td>
+                <td style="text-align:center;padding: 0.5rem;">${a.id}</td>
                 <td>${a.descricao}</td>
             </tr>`;
         });

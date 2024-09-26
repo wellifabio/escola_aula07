@@ -31,6 +31,7 @@ header, footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 10vh;
 }
 
@@ -69,6 +70,7 @@ button {
     border: none;
     padding: 0.5rem 1rem;
     margin: 0.5rem;
+    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -119,7 +121,8 @@ button {
 .tabela h3{
     align-self: flex-start;
     font-size: medium;
-    margin: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .tabela table{
@@ -145,6 +148,57 @@ button {
 .bvisualizar{
     background-color: var(--color-quaternary);
     color: var(--color-primary);
+}
+
+.cabecalho{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.janela{
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 300px;
+    background-color: var(--color-quinary);
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.janela form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.janela form input{
+    width: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--color-borda);
 }
 
 .oculto {

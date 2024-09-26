@@ -23,7 +23,7 @@ fetch(uri + 'professor/' + user.id)
                 <td>${t.nome}</td>
                 <td style="text-align:center">
                     <button class="bexcluir" onclick="excluir(${t.id})">Excluir</button>
-                    <button class="bvisualizar" onclick="visualizar(${t.id})">Visualizar</button>
+                    <button class="bvisualizar" onclick="visualizar(${t.id},'${t.nome}')">Visualizar</button>
                 </td>
             </tr>`;
         });
@@ -71,8 +71,8 @@ function excluir(id) {
 }
 
 //Ir para atividade
-function visualizar(id) {
-    const turma = { id: id };
+function visualizar(id, nome) {
+    const turma = { id, nome };
     window.localStorage.setItem('turma', JSON.stringify(turma));
     window.location.href = './turma.html';
 }
