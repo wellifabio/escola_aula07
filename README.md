@@ -16,6 +16,7 @@
 2. Abra com o VsCode e abra um terminal **(Ctrl+")** CMD ou bash
 3. Instale as dependências
 ```bash
+cd api
 npm install
 ```
 4. Inicie o SGBD MySQL MariaDB
@@ -24,7 +25,7 @@ npm install
 DATABASE_URL="mysql://root:@localhost:3306/turmas"
 ```
 ```bash
-npx prisma migrate dev
+npx prisma migrate dev --name init
 ```
 6. Inicie o servidor
 ```bash
@@ -32,3 +33,4 @@ npx nodemon
 ```
 7. Inicie o Front-End navegando até a pasta **front** e abrindo o arquivo **index.html** no navegador ou com Live Server do VsCode.
 
+![Wireframe](./docs/wireframe01.png)
