@@ -11,4 +11,4 @@ app.use(cors());
 app.use(express.json());
 app.use(rotes);
 
-app.listen(PORT, () => { console.log("API Turmas respondendo na porta " + PORT) });
+app.listen(PORT, () => { console.log("API Turmas respondendo em http://localhost:" + PORT) });
